@@ -78,5 +78,8 @@ these brew commands:
   $ export CXX=/usr/local/bin/g++-4.8
   $ CURL_LIBS=-L/usr/local/opt/curl/lib CURL_CFLAGS=-I/usr/local/opt/curl/include ./configure --enable-leveldb
   $ make
+  # If you want to use libbitcoin with pkg-config, you may want to change libbitcoin.pc
+  # to contain the correct boost libraries, for example this worked for me:
+  # Libs: -L${libdir} -lbitcoin -lboost_thread-mt -lboost_system-mt -lboost_regex-mt -lboost_filesystem-mt -lpthread -lcurl -lleveldb
   $ sudo make install
 
